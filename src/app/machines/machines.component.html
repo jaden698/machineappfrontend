@@ -1,0 +1,19 @@
+<app-header></app-header>
+
+<div class="container-fluid grid">
+    <h2>
+        Liste des VMs:
+      </h2>
+    <div class="card-wrapper" *ngFor="let machine of machines">
+                <div class="card">
+                    <h1>Machine:{{ machine.nom }}</h1>       
+                    <p *ngIf="machine.etat==true">Etat:Démarée</p>
+                    <p *ngIf="machine.etat==false">Etat:Arrétée</p>
+               </div>
+
+               <button type="button" class="btn btn-danger" *ngIf="machine.etat==true" (click)="machine.etat = false">Arreter</button>
+               <button type="button" class="btn btn-success" *ngIf="machine.etat==false" (click)="machine.etat = true">Demarer</button>
+
+    </div>
+</div>
+

@@ -1,0 +1,44 @@
+<app-header></app-header>
+<div class="formcontainer">
+    <div class="formbody">
+        <form style="width:100%;" [formGroup]="myForm">
+            <div class="header">Ajouter une machine</div>
+            <div>
+                    <input type="text" formControlName="id" matInput placeholder="id" id="id">               
+            </div>
+            <div>
+
+                    <input type="text" formControlName="nom" matInput placeholder="nom" id="nom">
+               
+            </div>
+            <div>
+                    
+                    <input type="text" formControlName="ip" matInput placeholder="ip" id="ip">
+                    
+            </div>
+     
+            <div>
+                <label>Entrer true ou false:</label>
+                    <input type="text" formControlName="etat" matInput placeholder="etat" id="etat">
+
+
+            </div>
+            <div style="margin-top:20px;">
+                <button class="mat-button" (click)="register()">save</button>
+            </div>
+
+
+            <div style="text-align: center;">                
+                {{successMessage}}
+            </div>
+        </form>
+    </div>
+
+    <div>
+        <div style="width: 290px; padding: 20px;">
+            <button (click)="movetomachines()">Machines</button>
+        </div>
+    </div>
+</div>
+
+
